@@ -1,0 +1,60 @@
+/* APODPage.module.css */
+.apod-image-one-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Cover full viewport height */
+  background-image: url('../../../public/dark.jpeg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  color: #fff; /* Set text color to white for better contrast */
+  font-family: Arial, sans-serif; /* Optional: Change font family */
+}
+.apod-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  padding-top: 120px; /* Adjust padding-top to accommodate the height of FrameComponent */
+  text-align: center;
+  color: #ffffff; /* Set text color to white for better contrast */
+}
+
+.apod-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #f0f0f0;
+}
+
+.apod-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+.apod-image {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.apod-details {
+  padding: 20px;
+  text-align: left;
+}
+
+.apod-explanation {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.apod-date {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}

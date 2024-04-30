@@ -1,0 +1,23 @@
+/* MediaDisplay.css */
+
+.media-container {
+    margin-top: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .media-image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .media-video {
+    width: 100%;
+  }
+  
+  .media-3d {
+    width: 100%;
+    height: 400px; /* Adjust height as needed for 3D model */
+  }
+  

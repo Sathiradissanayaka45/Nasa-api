@@ -1,0 +1,83 @@
+/* MarsPhotosPage.css */
+
+/* Ensure proper spacing below FrameComponent */
+.mars-photos-page {
+  padding-top: 120px; /* Adjust the padding to accommodate the height of FrameComponent */
+  padding-bottom: 50px; /* Add padding at the bottom for content spacing */
+  overflow: auto; /* Enable scrolling if content exceeds viewport */
+  background-image: url('../../../public/dark.jpeg'); /* Add background image URL */
+  background-size: cover; /* Ensure the background image covers the entire container */
+  background-position: center; /* Center the background image */
+  color: #fdf8f8; /* Set text color to white for better contrast */
+}
+
+/* Container for rover photos */
+.rover-photos-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr)); /* Display 4 images per row */
+  gap: 20px;
+  padding: 20px; /* Add padding to the container */
+}
+
+/* Individual photo card */
+.photo-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #fff; /* Set background color to white */
+  box-shadow: 0 4px 8px rgb(241, 4, 4); /* Adjust box shadow for better visibility */
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect on photo card */
+.photo-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Rover photo within the card */
+.rover-photo {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Ensure photos cover the entire frame */
+  border-radius: 8px 8px 0 0;
+}
+
+/* Details section of the photo card */
+.photo-details {
+  padding: 12px;
+  text-align: center;
+}
+
+/* Title of the photo */
+.photo-title {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #333; /* Adjust text color */
+}
+
+/* Date of the photo */
+.photo-date {
+  font-size: 14px;
+  color: #666; /* Adjust text color */
+}
+
+/* Center the page title */
+.page-title {
+  text-align: center; /* Center align the text */
+  margin-bottom: 20px; /* Optional: Add bottom margin for spacing */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .rover-photos-container {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 images per row on smaller screens */
+  }
+
+  .rover-photo {
+    height: 150px; /* Adjust height for smaller screens */
+  }
+
+  .photo-details {
+    padding: 8px;
+  }
+}

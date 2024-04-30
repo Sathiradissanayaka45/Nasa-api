@@ -1,0 +1,170 @@
+/* APODSelectDatePage.css */
+
+/* General styles for the page */
+.apod-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: url('../../../public/dark.jpeg'); /* Replace with your background image path */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: Arial, sans-serif; /* Optional: Change font family */
+}
+
+/* Container for the main content */
+.apod-content {
+  max-width: 800px;
+  width: 90%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Title styling */
+.apod-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+.date-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.date-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.date-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Submit button styles */
+.submit-button {
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #6056dd;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  outline: none; /* Remove default button focus outline */
+}
+
+.submit-button:hover {
+  background-color: #493ea3;
+}
+
+/* Grid container for APOD cards */
+.apod-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Dynamic grid layout with minimum card width of 300px */
+  gap: 20px;
+}
+
+/* Styling for each APOD card */
+.apod-card {
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+  transition: transform 0.3s ease;
+  background-color: #f5f5f5; /* Light background color for the card */
+}
+
+.apod-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling for images within APOD cards */
+.apod-image {
+  width: 100%;
+  height: 250px; /* Increase image height for larger cards */
+  object-fit: cover;
+}
+
+/* Styling for videos within APOD cards */
+.apod-video {
+  width: 100%;
+  height: 250px; /* Increase video height for larger cards */
+}
+
+.apod-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.apod-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #fff; /* Text color for card title */
+}
+
+.apod-card-date {
+  font-size: 16px;
+  color: #fff; /* Text color for card date */
+}
+
+/* Modal styles (assuming it's used for displaying details) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 80%;
+  max-height: 80%;
+  overflow: auto;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+.modal-info {
+  margin-top: 20px;
+}
+
+.modal-info h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.modal-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #666;
+}
